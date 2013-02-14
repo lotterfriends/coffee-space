@@ -1,0 +1,91 @@
+body {
+	background: url(../img/bg.jpg); 
+  	/*background: url(../img/space.gif) repeat 0 0 #000;*/
+}
+
+.game {	
+	border: 1px solid #888;
+	margin: 50px auto;
+	font-family: Sans-serif;
+	font-size: 16px;
+	background: #666;
+	padding: 20px;
+	width: 600px;
+	overflow: hidden;
+	cursor: none;
+	border-radius: 15px;
+	opacity: 0.8;
+}
+
+.game h1 {
+	font-size: 32px;
+	text-align: center;
+	margin-top: -5px;
+	margin-bottom: 10px;
+}
+
+.game .level, .game .shotCount {
+  border: 1px solid #000;
+	padding: 5px;
+	background: #CCC;
+	border-radius: 10px;
+	box-shadow: 0px 1px 5px #000 inset;
+}
+
+.game .level {
+	float: left;
+}
+
+.game .shotCount {
+	float: right;
+}
+
+.game .level span,
+.game .shotCount {
+	font-weight: bold;
+}
+
+.game .board {
+	background: url(../img/space.gif) repeat 50% 1px;
+	height: 440px;
+}
+
+.game .player {
+	margin-top: -40px;
+	position: absolute;
+	background: url(../img/player.gif) no-repeat 0 0 transparent;
+	width: 40px;
+	height: 63px;
+}
+
+.game .opponent {
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	background: url(../img/alien_ship.gif) no-repeat 0 0 transparent;
+}
+
+.game .text {
+	color: #fff;
+	font-size: 5em;
+	margin-top: -278px;
+	position: absolute;
+	text-align: center;
+	width: 600px;
+	text-shadow: 10px 20px 31px yellow;
+}
+
+.game .text span {
+	display:none;
+}
+
+.game .bullet {
+	width: 2px;
+	height: 2px;
+	background: white;
+	position: absolute;
+}
+
+.game .explosion {
+	position: absolute;
+}
