@@ -1,18 +1,4 @@
-# coffee-space
-
-A little Space Shoter written in CoffeeScript
-
-## Build
-```bash
-./bin/make.sh
-```
-
-## Demo
-http://htmlpreview.github.io/?https://github.com/lotterfriends/coffee-space/blob/master/index.html
-
-## License
-
-#### The MIT License (MIT)
+The MIT License (MIT)
 
 Copyright (c) 2013 André Tarnowsky
 
