@@ -1,5 +1,12 @@
 class Game
 
+	myRequestAnimationFrame = 
+		window.requestAnimationFrame ||
+		window.webkitRequestAnimationFrame ||
+		window.mozRequestAnimationFrame ||
+		(callback) -> 
+			setTimeout(callback, 1000 / 60)
+
 	constructor: ($game) ->
 		# DOM Elements
 		@$boardNode = $game.find('.board')
@@ -7,7 +14,7 @@ class Game
 		@$shotCountNode = $game.find('.shotCount span')
 		@$textNode = $game.find('.text')	
 		# Configuration
-		@speed = 80
+		@speed = 40
 		@level = 1
 		@levelTime = 20000 # 20 Sec.
 		@moveFactor = 5
@@ -115,16 +122,16 @@ class Game
 		return @pause || @gameOver;
 
 	run: ->
-		setInterval =>
-			return if @isGameOverOrPause()
-			return if @gameOver or @pause
+		if !@isGameOverOrPause()
 			@spawnOpponents()
 			@moveBackground()
 			@moveOpponents()
 			@moveBullets()
 			@collision()
+		setTimeout =>
+			myRequestAnimationFrame(@run.bind(this));
 		, @speed
-		
+		return		
 	
 	
 	
