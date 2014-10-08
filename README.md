@@ -2,6 +2,13 @@
 
 A little Space Shoter written in CoffeeScript
 
+## Build
+```bash
+./bin/make.sh
+```
+
+## Demo
+http://htmlpreview.github.io/?https://github.com/lotterfriends/coffee-space/blob/master/index.html
 
 ## License
 
