@@ -10,6 +10,8 @@ class Explosion
 		$explosionNode = $("<img class='explosion' src='"+ @picture + repeatStamp + "'>").appendTo(@$boardNode)
 		$explosionNode.css("left", @position.left + "px")
 		$explosionNode.css("top", @position.top + "px")
+		$explosionNode.on 'dragstart', (e) =>
+			e.preventDefault()
 		return $explosionNode
 		
 	destroy: ->
