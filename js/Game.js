@@ -49,11 +49,15 @@
     }
 
     Explosion.prototype.create = function() {
-      var $explosionNode, repeatStamp;
+      var $explosionNode, repeatStamp,
+        _this = this;
       repeatStamp = "?" + new Date().valueOf();
       $explosionNode = $("<img class='explosion' src='" + this.picture + repeatStamp + "'>").appendTo(this.$boardNode);
       $explosionNode.css("left", this.position.left + "px");
       $explosionNode.css("top", this.position.top + "px");
+      $explosionNode.on('dragstart', function(e) {
+        return e.preventDefault();
+      });
       return $explosionNode;
     };
 
