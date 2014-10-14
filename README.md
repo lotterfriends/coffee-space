@@ -1,6 +1,6 @@
 # coffee-space
 
-A little Space Shoter written in CoffeeScript
+A little Space Shooter written in CoffeeScript
 
 ## Build
 ```bash
